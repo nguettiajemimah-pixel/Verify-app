@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Reports - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/reports.html">Reports</a>
+        <a href="#" id="logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="margin-bottom: 2rem;">Reports</h1>
+    
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__content">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end;">
+          <div style="flex: 1; min-width: 200px;">
+            <label class="form__label" for="filter-status">Filter by Status</label>
+            <select id="filter-status" class="form__select">
+              <option value="">All Statuses</option>
+              <option value="SUBMITTED">Submitted</option>
+              <option value="UNDER_REVIEW">Under Review</option>
+              <option value="NEEDS_MORE_INFORMATION">Needs More Information</option>
+              <option value="RESOLVED">Resolved</option>
+              <option value="CLOSED">Closed</option>
+            </select>
+          </div>
+          <button id="apply-filter" class="btn btn--primary">Apply Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="loading__spinner"></div>
+      <p>Loading reports...</p>
+    </div>
+
+    <div id="reports-container">
+      <div class="loading">
+        <p>Loading reports...</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/reports.js"></script>
+</body>
+</html>

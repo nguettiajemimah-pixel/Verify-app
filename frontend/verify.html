@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Verify Product - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/index.html">Home</a>
+        <a href="/verify.html">Verify</a>
+        <a href="/search.html">Search</a>
+        <a href="/report.html">Report</a>
+        <a href="/help.html">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Product Verification</h1>
+    
+    <div class="demo-notice">
+      <p class="demo-notice__text">
+        ⚠️ DEMO DATASET - This prototype uses controlled demonstration data.
+      </p>
+    </div>
+
+    <form class="form" id="verification-form">
+      <div class="form__group">
+        <label class="form__label" for="registration-number">
+          Registration Number *
+        </label>
+        <input 
+          type="text" 
+          id="registration-number" 
+          name="registration_number" 
+          class="form__input" 
+          placeholder="e.g., GH-DEMO-001"
+          required
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="product-name">
+          Product Name
+        </label>
+        <input 
+          type="text" 
+          id="product-name" 
+          name="product_name" 
+          class="form__input" 
+          placeholder="e.g., Demo Product Alpha"
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="manufacturer">
+          Manufacturer
+        </label>
+        <input 
+          type="text" 
+          id="manufacturer" 
+          name="manufacturer" 
+          class="form__input" 
+          placeholder="e.g., Demo Pharma Ltd"
+        >
+      </div>
+
+      <button type="submit" class="btn btn--primary" style="width: 100%;">
+        Compare With Registry
+      </button>
+    </form>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="loading__spinner"></div>
+      <p>Checking registry information...</p>
+    </div>
+
+    <div id="result" style="display: none; margin-top: 2rem;">
+      <!-- Result will be populated by JavaScript -->
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/verify.js"></script>
+</body>
+</html>

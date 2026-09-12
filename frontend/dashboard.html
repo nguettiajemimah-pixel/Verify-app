@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Regulator Dashboard - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/reports.html">Reports</a>
+        <a href="#" id="logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="margin-bottom: 2rem;">Regulator Dashboard</h1>
+    
+    <div id="loading" class="loading" style="display: none;">
+      <div class="loading__spinner"></div>
+      <p>Loading dashboard...</p>
+    </div>
+
+    <div id="dashboard-content">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="card">
+          <div class="card__title">Total Reports</div>
+          <div class="card__content" style="font-size: 2rem; font-weight: 700;" id="total-reports">-</div>
+        </div>
+        <div class="card">
+          <div class="card__title">New Reports</div>
+          <div class="card__content" style="font-size: 2rem; font-weight: 700; color: var(--info);" id="new-reports">-</div>
+        </div>
+        <div class="card">
+          <div class="card__title">Under Review</div>
+          <div class="card__content" style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="under-review">-</div>
+        </div>
+        <div class="card">
+          <div class="card__title">Resolved</div>
+          <div class="card__content" style="font-size: 2rem; font-weight: 700; color: var(--success);" id="resolved">-</div>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 1rem;">Verification Statistics</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="card" style="padding: 1rem;">
+          <div style="font-weight: 600;">MATCH</div>
+          <div style="font-size: 1.5rem; color: var(--success);" id="match-count">-</div>
+        </div>
+        <div class="card" style="padding: 1rem;">
+          <div style="font-weight: 600;">PARTIAL MATCH</div>
+          <div style="font-size: 1.5rem; color: var(--warning);" id="partial-match-count">-</div>
+        </div>
+        <div class="card" style="padding: 1rem;">
+          <div style="font-weight: 600;">DOES NOT MATCH</div>
+          <div style="font-size: 1.5rem; color: var(--error);" id="does-not-match-count">-</div>
+        </div>
+        <div class="card" style="padding: 1rem;">
+          <div style="font-weight: 600;">NOT FOUND</div>
+          <div style="font-size: 1.5rem; color: var(--info);" id="not-found-count">-</div>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 1rem;">Recent Reports</h2>
+      <div id="recent-reports">
+        <div class="loading">
+          <p>Loading recent reports...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

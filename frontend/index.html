@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <meta name="description" content="VERIFY GH - Check it. Match it. Trust the information. Verify regulated-product information against available registry records.">
+  <title>VERIFY GH - Check it. Match it. Trust the information.</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/index.html">Home</a>
+        <a href="/verify.html">Verify</a>
+        <a href="/search.html">Search</a>
+        <a href="/report.html">Report</a>
+        <a href="/help.html">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">VERIFY GH</h1>
+        <p class="hero__tagline">Check it. Match it. Trust the information.</p>
+        <p class="hero__description">
+          Verify regulated-product information against available registry records.
+        </p>
+        <div style="margin-top: 2rem;">
+          <a href="/verify.html" class="btn btn--primary btn--large">Verify a Product</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 3rem 1rem;">
+      <div class="demo-notice">
+        <p class="demo-notice__text">
+          ⚠️ DEMO DATASET - This prototype uses controlled demonstration data and is not a live official registry.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 2rem 1rem;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">How It Works</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div class="card">
+          <div class="card__title">1. Enter Product Information</div>
+          <div class="card__content">
+            Enter the registration number, product name, and manufacturer from the product packaging.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__title">2. Compare with Registry</div>
+          <div class="card__content">
+            We compare your submitted information against available registry records.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__title">3. See What Matches</div>
+          <div class="card__content">
+            View exactly which fields match or differ from the registry record.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__title">4. Report if Needed</div>
+          <div class="card__content">
+            If you find an inconsistency, submit a report to the relevant authority.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 2rem 1rem;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Verification Statuses</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <div class="card">
+          <div class="status status--match" style="font-size: 1rem; padding: 0.5rem;">MATCH</div>
+          <div class="card__content" style="font-size: 0.9rem;">
+            The information you entered matches the available registry record.
+          </div>
+        </div>
+        <div class="card">
+          <div class="status status--partial-match" style="font-size: 1rem; padding: 0.5rem;">PARTIAL MATCH</div>
+          <div class="card__content" style="font-size: 0.9rem;">
+            Some fields match, but others require attention or were not provided.
+          </div>
+        </div>
+        <div class="card">
+          <div class="status status--does-not-match" style="font-size: 1rem; padding: 0.5rem;">DOES NOT MATCH</div>
+          <div class="card__content" style="font-size: 0.9rem;">
+            One or more important fields differ from the registry record.
+          </div>
+        </div>
+        <div class="card">
+          <div class="status status--not-found" style="font-size: 1rem; padding: 0.5rem;">NOT FOUND</div>
+          <div class="card__content" style="font-size: 0.9rem;">
+            No corresponding record was found in the available registry dataset.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 2rem 1rem; margin-bottom: 3rem;">
+      <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="card__title">Important Notice</div>
+        <div class="card__content">
+          <p style="margin-bottom: 1rem;">
+            VERIFY GH compares product information with available registry records. It does not independently certify product authenticity or safety.
+          </p>
+          <p>
+            Verification results depend on the registry data available to the platform at the time of checking.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: var(--secondary); color: var(--white); padding: 2rem 1rem; text-align: center;">
+    <div class="container">
+      <p>&copy; 2024 VERIFY GH. Check it. Match it. Trust the information.</p>
+    </div>
+  </footer>
+</body>
+</html>

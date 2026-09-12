@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Help - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/index.html">Home</a>
+        <a href="/verify.html">Verify</a>
+        <a href="/search.html">Search</a>
+        <a href="/report.html">Report</a>
+        <a href="/help.html">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Help & Information</h1>
+    
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__title">How Verification Works</div>
+      <div class="card__content">
+        <p style="margin-bottom: 1rem;">
+          VERIFY GH helps you compare product information against available registry records. 
+          The process is simple:
+        </p>
+        <ol style="margin-left: 1.5rem; line-height: 2;">
+          <li>Enter the registration number, product name, and manufacturer from the product packaging</li>
+          <li>We compare your submitted information with available registry records</li>
+          <li>You see exactly which fields match or differ</li>
+          <li>If you find an inconsistency, you can submit a report to the relevant authority</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__title">Understanding Verification Statuses</div>
+      <div class="card__content">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--success);">MATCH</h3>
+          <p>The information you entered matches the available registry record for the checked fields.</p>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--warning);">PARTIAL MATCH</h3>
+          <p>Some fields match, but others require attention or were not provided for comparison.</p>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--error);">DOES NOT MATCH</h3>
+          <p>One or more important fields differ from the available registry record.</p>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--info);">NOT FOUND</h3>
+          <p>No corresponding record was found in the available registry dataset. This does not prove that the product is fake. Further verification through the relevant authority may be appropriate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__title">Data Source Information</div>
+      <div class="card__content">
+        <p style="margin-bottom: 1rem;">
+          This prototype uses controlled demonstration data and is not a live official registry.
+        </p>
+        <p>
+          Verification results depend on the registry data available to the platform at the time of checking.
+          VERIFY GH does not independently certify product authenticity, safety, or compliance.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__title">Privacy Information</div>
+      <div class="card__content">
+        <p style="margin-bottom: 1rem;">
+          VERIFY GH collects only the information necessary to process your verification and report requests.
+        </p>
+        <p>
+          We do not require unnecessary personal information. Location information is collected at an appropriate level (town/district/region) unless more precise location is genuinely required.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card__title">About VERIFY GH</div>
+      <div class="card__content">
+        <p style="margin-bottom: 1rem;">
+          VERIFY GH helps consumers compare regulated-product information with available registry records. 
+          It does not independently certify authenticity, safety, or compliance.
+        </p>
+        <p>
+          We do not ask consumers to trust us blindly. We show you the information we compared, 
+          the source we used, what matched, what differed, and what you can do next.
+        </p>
+        <p style="margin-top: 1rem; font-weight: 600;">
+          Check it. Match it. Trust the information.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/index.html" class="btn btn--primary">Return to Home</a>
+    </div>
+  </main>
+
+  <footer style="background-color: var(--secondary); color: var(--white); padding: 2rem 1rem; text-align: center; margin-top: 3rem;">
+    <div class="container">
+      <p>&copy; 2024 VERIFY GH. Check it. Match it. Trust the information.</p>
+    </div>
+  </footer>
+</body>
+</html>

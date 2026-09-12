@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Search Registry - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/index.html">Home</a>
+        <a href="/verify.html">Verify</a>
+        <a href="/search.html">Search</a>
+        <a href="/report.html">Report</a>
+        <a href="/help.html">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Search Registry</h1>
+    
+    <div class="demo-notice">
+      <p class="demo-notice__text">
+        ⚠️ DEMO DATASET - This prototype uses controlled demonstration data.
+      </p>
+    </div>
+
+    <form class="form" id="search-form">
+      <div class="form__group">
+        <label class="form__label" for="search-query">
+          Product name, registration number or manufacturer *
+        </label>
+        <input 
+          type="text" 
+          id="search-query" 
+          name="query" 
+          class="form__input" 
+          placeholder="e.g., Ghana Pain Relief"
+          required
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="category">Category</label>
+        <select id="category" name="category" class="form__select">
+          <option value="">All Categories</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Cosmetics">Cosmetics</option>
+          <option value="Supplements">Supplements</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn--primary" style="width: 100%;">
+        Search
+      </button>
+    </form>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="loading__spinner"></div>
+      <p>Searching registry...</p>
+    </div>
+
+    <div id="results" style="display: none; margin-top: 2rem;">
+      <!-- Results will be populated by JavaScript -->
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/search.js"></script>
+</body>
+</html>

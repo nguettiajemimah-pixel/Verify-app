@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087443">
+  <title>Report Inconsistency - VERIFY GH</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="/index.html" class="header__logo">VERIFY GH</a>
+      <nav class="header__nav">
+        <a href="/index.html">Home</a>
+        <a href="/verify.html">Verify</a>
+        <a href="/search.html">Search</a>
+        <a href="/report.html">Report</a>
+        <a href="/help.html">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2rem 1rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Report an Inconsistency</h1>
+    
+    <div class="demo-notice">
+      <p class="demo-notice__text">
+        ⚠️ Describe the information that appears inconsistent. This does not determine that a product is fake.
+      </p>
+    </div>
+
+    <form class="form" id="report-form">
+      <div class="form__group">
+        <label class="form__label" for="product-name">
+          Product Name *
+        </label>
+        <input 
+          type="text" 
+          id="product-name" 
+          name="product_name" 
+          class="form__input" 
+          placeholder="e.g., Demo Product Alpha"
+          required
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="registration-number">
+          Registration Number (if visible)
+        </label>
+        <input 
+          type="text" 
+          id="registration-number" 
+          name="registration_number" 
+          class="form__input" 
+          placeholder="e.g., GH-DEMO-001"
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="manufacturer">
+          Manufacturer/Company (if visible)
+        </label>
+        <input 
+          type="text" 
+          id="manufacturer" 
+          name="manufacturer" 
+          class="form__input" 
+          placeholder="e.g., Demo Pharma Ltd"
+        >
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="issue-type">
+          Issue Type *
+        </label>
+        <select id="issue-type" name="issue_type" class="form__select" required>
+          <option value="">Select an issue type</option>
+          <option value="REGISTRATION_DIFFERS">Registration information differs</option>
+          <option value="MANUFACTURER_DIFFERS">Manufacturer information differs</option>
+          <option value="PRODUCT_NAME_DIFFERS">Product name differs</option>
+          <option value="MISSING_REGISTRY_RECORD">Missing registry record</option>
+          <option value="PACKAGING_CONCERN">Packaging information concern</option>
+          <option value="EXPIRED_OUTDATED">Expired/outdated information</option>
+          <option value="OTHER">Other</option>
+        </select>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="description">
+          Description *
+        </label>
+        <textarea 
+          id="description" 
+          name="description" 
+          class="form__textarea" 
+          placeholder="Describe the information that appears inconsistent..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="location">
+          Location (Town/District/Region) *
+        </label>
+        <input 
+          type="text" 
+          id="location" 
+          name="location" 
+          class="form__input" 
+          placeholder="e.g., Accra, Greater Accra"
+          required
+        >
+      </div>
+
+      <button type="submit" class="btn btn--primary" style="width: 100%;">
+        Submit Report
+      </button>
+    </form>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="loading__spinner"></div>
+      <p>Submitting report...</p>
+    </div>
+
+    <div id="result" style="display: none; margin-top: 2rem;">
+      <!-- Result will be populated by JavaScript -->
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/report.js"></script>
+</body>
+</html>
