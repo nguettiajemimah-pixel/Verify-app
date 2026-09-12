@@ -1,6 +1,6 @@
 /* API client for VERIFY GH */
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://verify-backend-3d2z.onrender.com';
 
 class ApiClient {
   async request(endpoint, options = {}) {
